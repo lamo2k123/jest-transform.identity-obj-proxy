@@ -1,0 +1,23 @@
+sudo: false
+os:
+  - linux
+  - osx
+
+language: node_js
+node_js:
+  - 6
+  - 7
+  - 8
+
+cache:
+  yarn: true
+  directories:
+    - node_modules
+
+deploy:
+  provider: npm
+  email: lamo2k123@gmail.com
+  api_key: $NPM_API_KEY
+  on:
+    tags: true
+    repo: lamo2k123/jest-transform.reflection
